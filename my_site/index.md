@@ -116,11 +116,8 @@ output. The STG manages these competing objectives while remaining
 degenerate to ion channel density. Neuromodulators can produce a
 diverse set of network states using the same cellular and synaptic
 morphology. In particular to the STG, the dense, tangled neuropil and
-gradations in reversal potential render neurons isopotential with re-
-spect to the somata. Neuromodulators, then, play the role of main-
-taining and switching network activity. For stable and responsive bi-
-ological activity, degenerate networks must still be robust to environ-
-mental perturbation and responsive to intentional modulation. In this
+gradations in reversal potential render neurons isopotential with respect to the somata. Neuromodulators, then, play the role of maintaining and switching network activity.
+For stable and responsive biological activity, degenerate networks must still be robust to environmental perturbation and responsive to intentional modulation. In this
 thesis, I describe red pigment-concentrating hormone (RPCH) acting
 as a neuromodulator on a computational model of a rhythmic motor
 circuit.
