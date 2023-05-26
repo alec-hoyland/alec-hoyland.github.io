@@ -14,3 +14,17 @@ function lx_baz(com, _)
   # do whatever you want here
   return uppercase(brace_content)
 end
+
+using BibTeX
+
+function ref_item(ref, infos)
+  io = IOBuffer()
+
+  author = infos["author"]
+  author_last, author_first = strip.(split(author, ","))
+
+  write(io, "<li id=\"#$ref\">")
+  write(io, """$author_first $author_last, <span style="font-style:italic;">$(infos["title"])</span>, $(infos["date"]).""")
+  write(io, "</li>")
+  return String(take!(io))
+end
