@@ -1,26 +1,35 @@
 @def title = "Alec Hoyland's Website"
 @def tags = ["syntax", "code"]
+@def maxtoclevel=2
 
 # Alec Hoyland, Journeyman Neuromancer
 
 I’m a computational scientist at Clarifai Inc. and a PhD student in Biomedical Engineering at Worcester
 Polytechnic Institute.
-At Clarifai, I am a technical lead for public sector object detection research.
+At Clarifai, I am a 
+senior research scientist and 
+technical lead for public sector object detection research.
 At WPI, I work in [The Brain, Behavior, and Computation](https://www.wpi.edu/people/faculty/alammert) Lab,
 where I use advanced signal processing and machine learning to improve biosignal data collection and analysis.
 
 My research interests include autoencoders, object detection, parameter optimization,
 signal processing, and differentiable programming.
 
-<!-- \tableofcontents you can use \toc as well -->
+### Table of Contents
+\toc
+
 
 ## Contact Me
 
-| [alec.hoyland@posteo.net](mailto:alec.hoyland@posteo.net) | [GitHub](https://www.wpi.edu/people/faculty/alammert) | [LinkedIn](https://www.linkedin.com/in/alec-hoyland-a00a4b90/) | [CV](_assets/CV.pdf)
+[alec.hoyland@posteo.net](mailto:alec.hoyland@posteo.net) | [GitHub](https://www.wpi.edu/people/faculty/alammert) | [LinkedIn](https://www.linkedin.com/in/alec-hoyland-a00a4b90/) | [CV](/assets/CV.pdf)
 
 <!-- TODO: figure out CV -->
 
 ## Code & Projects
+
+Unfortunately, a lot of the work I've done
+is classified or proprietary, but here are some snapshots
+of open-source projects I've worked on.
 
 ### [TinnitusReconstructor.jl](https://github.com/The-Lammert-Lab/TinnitusReconstructor.jl)
 
@@ -31,12 +40,31 @@ There's strong evidence that knowing a patient's tinnitus percept
 can help treat the condition via sound therapy.
 
 We devised a reverse correlation experiment
-wher subjects listen to randomized noise
+where subjects listen to randomized noise
 to see if they recognize their tinnitus sound within it.
 We can use compressed sensing and regression algorithms
-to reconstruct detailed spectral representatiosn of what their tinnitus percept sounds like.
+to reconstruct detailed spectral representations of what their tinnitus percept sounds like.
 
 > See also: [tinnitus-reconstruction](https://github.com/The-Lammert-Lab/tinnitus-reconstruction).
+
+### [xolotl](https://xolotl.readthedocs.io/en/master/)
+
+Xolotl is a fast single- and multi-compartment neuronal network simulator
+written in C++ with a MATLAB interface you'll actually like.
+We built it after being disappointed by the neuronal network simulation software
+already out there.
+
+Since we were simulating thousands of models with hundreds of stiff equations,
+we needed something fast, and we wanted it to be usable too.
+As far as I am aware, xolotl is still the fastest simulator out there,
+though [`Conductor.jl`](https://wsphillips.github.io/Conductor.jl/stable/basics/) is only a bit slower.
+if you take the guardrails off.
+
+Xolotl has built in parallelization and parameter optimization,
+as well as interactivity for hand-tuning parameters live.
+
+\figalt{Hand-tuning parameters using sliders}{/assets/xolotl.gif}
+
 
 ### [ReducedOrderModelsProject.jl](https://alec-hoyland.github.io/ReducedOrderModelsProject.jl/)
 
@@ -51,40 +79,35 @@ A solution for an arbitrary parameter value is a linear combination
 of the solutions from the subspace.
 Thus, the Krylov subspace forms a basis for the solutions of the PDE system.
 
-It turns out that we don’t need to know all the vectors in the subspace; we only need about 10. The ROM is constructed by looking at the differences between solutions and accurately captures the dynamics with only a few examples. This is far better performance than a neural network function approximator because vanilla neural networks don’t exploit the known dynamics for the system. Here, we can write the equation of state, so we can take advantage of it directly.
+It turns out that we don’t need to know all the vectors in the subspace; we only need about 10. The ROM is constructed by looking at the differences between solutions and accurately captures the dynamics with only a few examples. This method has far better performance than a neural network function approximator because vanilla neural networks don’t exploit the known dynamics for the system. Here, we can write the equation of state, so we can take advantage of them directly.
 
 ### [MLP-Demo](https://github.com/alec-hoyland/mlp-demo)
 
-I wrote this demo for a middle school after-school program
+I wrote this demo for middle school after-school program students
 who were interested in robotics and machine learning.
 We got to play around with it interactively as they tried to figure
 out how it worked and how to break it.
 
-### [xolotl](https://xolotl.readthedocs.io/en/master/)
-
-Xolotl is a fast single- and multi-compartment neuronal network simulator
-written in C++ with a MATLAB interface you'll actually like.
-We built it after being disappointed by the neuronal network simulation software
-already out there.
-
-Since we were simulating thousands of models with hundreds of stiff equations,
-we needed something fast, and we wanted it to be usable too.
-As far as I am aware, xolotl is still the fastest simulator out there,
-though `Conductor.jl` is only a bit slower.
-if you take the guardrails off.
-
-Xolotl has built in parallelization and parameter optimization,
-as well as interactivity for hand-tuning parameters live.
-
-![](/_assets/xolotl.mp4)
 
 <!-- TODO: embed this video -->
 
 ### [BandwidthEstimator](https://github.com/hasselmonians/BandwidthEstimator)
 
+This package implements a maximum-likelihood leave-one-out cross-validated
+bandwidth parameter estimation for smoothing a neural spike train.
+The bandwidth parameter tells you what intrinsic time-scale 
+the spike train encodes.
+
+This package works with [RatCatcher](https://github.com/hasselmonians/RatCatcher),
+which is a MATLAB utility for parsing data and passing analysis scripts
+from a local machine to a high-performance computing cluster
+to run in parallel, before re-stitching the analyses together afterwards.
+
 ## Writings
 
 ### [Differential Responses to Neuromodulation in Model Neurons of the Crustacean Stomatogastric Ganglion](https://github.com/alec-hoyland/master-thesis)
+
+*Master of Neuroscience thesis at Brandeis University*
 
 Neuronal networks must produce stable circuit output for sustained
 periods of time despite environmental perturbation. In addition, they
@@ -104,15 +127,16 @@ circuit.
 
 ### [Agency, Consent, Schizophrenia](https://github.com/alec-hoyland/history-of-ideas-thesis/blob/master/template_Article.pdf)
 
-In partial fulfillment of the History of Ideas minor at Brandeis University, I present this
-manuscript discussing the genealogy of schizophrenia as a scientific phenomenon and discuss
-the intersection of genealogy, science, and social justice. What philosophical and sociological
+*History of Ideas minor thesis at Brandeis University*
+
+I presented this paper at a mini-conference on
+the intersection of genealogy, science, and social justice
+held at Brandeis University. What philosophical and sociological
 conclusions can we gather from current neuroscientific research? This work is broken into three
 parts. First we consider the scientific and philosophical implications of anomalous self-experience
 in schizophrenia. Second, we consider an examination of agency in schizophrenic individuals.
 Finally, we consider the implications of the first and second sections on issues of social justice
-concerning sexual consent. Throughout this small work, I have included drawings and paintings
-by schizophrenic painters.
+concerning sexual consent.
 
 ## Publications
 
