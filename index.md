@@ -81,6 +81,21 @@ Thus, the Krylov subspace forms a basis for the solutions of the PDE system.
 
 It turns out that we don’t need to know all the vectors in the subspace; we only need about 10. The ROM is constructed by looking at the differences between solutions and accurately captures the dynamics with only a few examples. This method has far better performance than a neural network function approximator because vanilla neural networks don’t exploit the known dynamics for the system. Here, we can write the equation of state, so we can take advantage of them directly.
 
+### [Audio-ML](https://github.com/alec-hoyland/audio-ml)
+
+I developed some demos of supervised and unsupervised machine learning for audio using PyTorch.
+
+In one notebook, I developed an unsupervised ML model for speech detection
+using open-unmix for denoising, Mel-frequency cepstral coefficients for features,
+dimensionality reduction using UMAP, and clustering using k-means.
+
+I also use `whispercpp` to transcribe speech.
+
+In a [literate programming](https://en.wikipedia.org/wiki/Literate_programming) script,
+I build a convolutional autoencoder that uses 2-D convol ution and max pooling
+to reduce the dimensionality of an audio signal (represented as a Mel-frequency spectrogram)
+in the latent space.
+
 ### [MLP-Demo](https://github.com/alec-hoyland/mlp-demo)
 
 I wrote this demo for middle school after-school program students
