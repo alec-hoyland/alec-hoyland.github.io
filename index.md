@@ -4,15 +4,14 @@
 
 # Alec Hoyland, Journeyman Neuromancer
 
-I’m a computational scientist at Clarifai Inc. and a PhD student in Biomedical Engineering at Worcester
+I’m a computational scientist at [Yurts AI](http://yurts.ai/) and a PhD student in Biomedical Engineering at Worcester
 Polytechnic Institute.
-At Clarifai, I am a 
-senior research scientist and 
-technical lead for public sector object detection research.
+At Yurts, I develop and deploy the Yurts platform, an LLM technology stack that automagically ingests
+and indexes factual documents, enabling an LLM to use knowledge from those documents and reducing hallucinations.
 At WPI, I work in [The Brain, Behavior, and Computation](https://www.wpi.edu/people/faculty/alammert) Lab,
 where I use advanced signal processing and machine learning to improve biosignal data collection and analysis.
 
-My research interests include autoencoders, object detection, parameter optimization,
+My research interests include autoencoders, vector embeddings, parameter optimization,
 signal processing, and differentiable programming.
 
 ### Table of Contents
@@ -21,9 +20,7 @@ signal processing, and differentiable programming.
 
 ## Contact Me
 
-[alec.hoyland@posteo.net](mailto:alec.hoyland@posteo.net) | [GitHub](https://www.wpi.edu/people/faculty/alammert) | [LinkedIn](https://www.linkedin.com/in/alec-hoyland-a00a4b90/) | [CV](/assets/CV.pdf)
-
-<!-- TODO: figure out CV -->
+[alec.hoyland@posteo.net](mailto:alec.hoyland@posteo.net) | [GitHub](https://github.com/alec-hoyland) | [LinkedIn](https://www.linkedin.com/in/alec-hoyland-a00a4b90/) | [CV](/assets/CV.pdf)
 
 ## Code & Projects
 
