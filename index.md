@@ -4,15 +4,12 @@
 
 # Alec Hoyland, Journeyman Neuromancer
 
-I’m a computational scientist at [Yurts AI](http://yurts.ai/) and a PhD student in Biomedical Engineering at Worcester
-Polytechnic Institute.
-At Yurts, I develop and deploy the Yurts platform, an LLM technology stack that automagically ingests
-and indexes factual documents, enabling an LLM to use knowledge from those documents and reducing hallucinations.
-At WPI, I work in [The Brain, Behavior, and Computation](https://www.wpi.edu/people/faculty/alammert) Lab,
-where I use advanced signal processing and machine learning to improve biosignal data collection and analysis.
-
-My research interests include autoencoders, vector embeddings, parameter optimization,
-signal processing, and differentiable programming.
+I'm a machine learning engineer and computational scientist
+with a background in computational neuroscience.
+I've worked on diverse projects such as fine-tuning and quantization of LLMs,
+parameter optimization of biophysically-realistic neuronal networks,
+ML-optimization of audio signal reconstruction,
+and object detection from satellite imagery.
 
 ### Table of Contents
 \toc
@@ -116,6 +113,12 @@ from a local machine to a high-performance computing cluster
 to run in parallel, before re-stitching the analyses together afterwards.
 
 ## Writings
+
+### [Chat Metrics for Enterprise-Scale Retrieval-Augmented Generation](https://www.yurts.ai/blog/chat-metrics-for-enterprise-scale-rag)
+
+I designed a suite of "chat metrics" -- unsupervised ML-based metrics for quantifying the performance
+of both the retrieval and generation steps of retrieval-augmented generation with LLMs.
+Here's a blog post discussing some of them.
 
 ### [Differential Responses to Neuromodulation in Model Neurons of the Crustacean Stomatogastric Ganglion](https://github.com/alec-hoyland/master-thesis)
 
